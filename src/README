@@ -1,0 +1,26 @@
+Pour compiler et tester:
+
+ - make all : tout compiler
+ - make clean : effacer les fichiers temporaires de MPI ainsi que les fichiers compiles
+ - make run : demarre sur un exemple d'ocean, 100 tours
+
+Attention: il faut au moins 2 processeurs, le 2e servant de master
+
+
+Quelques options:
+  Differentes options sont reglables dans les fichiers .h presents dans le repertoire include/
+
+ fish.h
+  RECUT_OPTION: active ou desactive le redecoupage
+  #define _DEBUG affiche les infos de debug
+  #define _RECUT affiche les infos relative au redecoupage dynamique
+  #define _DISPLAY affiche l'avancement en jolies couleurs 
+
+
+ affichage.h
+  DISPLAY_INFO
+  IMG_EVERY_X_STEPS : taux de rafraichissement de l'affichage
+  STOP_ON_IMG: demande confirmation au clavier pour passer a l'image suivante
+  PRINT_TEXT: informations textuelles sur l'affichage
+  PRINT_SDL: affichage de SDL ou pas
+  
